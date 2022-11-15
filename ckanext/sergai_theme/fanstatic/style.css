@@ -88,7 +88,7 @@
 
 body {
   background: rgba(0, 169, 144, 0);
-  background-image: url("/images/IMG_0026.JPG");
+  background-image: url("/images/background_satu_data.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -338,6 +338,7 @@ h2.module-heading > i {
 .search-form .search-input.search-giant input {
   padding: 15px 15px 15px 40px;
   border: #000000 2px solid;
+  border-radius: 40px;
 }
 
 .homepage .module-search {
@@ -430,7 +431,7 @@ label {
 .main-data-strategy-points > ul > li {
   margin: 0 0 30px 0;
   font-size: 16px;
-  font0-weight: 200;
+  font-weight: 200;
   color: #002C2D;
 }
 

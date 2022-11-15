@@ -14,4 +14,10 @@
       </button>
     </div>
   </form>
+  <h4 class="text-center">Pencarian Paling Populer</h4>
+  {% for tag in tags %}
+  <a class="badge badge-success" style="margin-right:10px" href="{% url_for 'dataset.search', tags=tag.name %}">{{
+    h.truncate(tag.display_name,
+    22) }}</a>
+  {% endfor %}
 </div>
