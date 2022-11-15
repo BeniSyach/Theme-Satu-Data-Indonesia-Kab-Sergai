@@ -1,0 +1,64 @@
+{#
+
+Displays a test for results of a search.
+
+query - The text that was searched for
+count - The number of results for the search
+type - Search result type (dataset, group, organization)
+
+Example:
+
+{% snippet 'snippets/search_result_text.html', query=query, count=count, type='dataset' %}
+
+#}
+{% if type == 'dataset' %}
+{% set text_query = ungettext('{number} kumpulan data ditemukan untuk "{query}"', '{number} kumpulan data ditemukan
+untuk
+"{query}"', count) %}
+{% set text_query_none = _('Tidak ada kumpulan data yang ditemukan for "{query}"') %}
+{% set text_no_query = ungettext('{number} kumpulan data ditemukan', '{number} datasets found', count) %}
+{% set text_no_query_none = _('Tidak ada kumpulan data yang ditemukan') %}
+
+{% elif type == 'group' %}
+{% set text_query = ungettext('{number} topik ditemukan untuk "{query}"', '{number} topik ditemukan untuk "{query}"',
+count)
+%}
+{% set text_query_none = _('Tidak ada topik ditemukan untuk "{query}"') %}
+{% set text_no_query = ungettext('{number} Topik Ditemukan', '{number} Topik Di Temukan', count) %}
+{% set text_no_query_none = _('Tidak ada Topik Di Temukan') %}
+
+{% elif type == 'organization' %}
+{% set text_query = ungettext('{number} Organisasi Di Temukan untuk "{query}"', '{number} Organisasi Di Temukan untuk
+"{query}"',
+count) %}
+{% set text_query_none = _('No Organisasi Di Temukan untuk "{query}"') %}
+{% set text_no_query = ungettext('{number} Organisasi Di Temukan', '{number} organizations found', count) %}
+{% set text_no_query_none = _('Tidak Ada Organisasi Di Temukan') %}
+
+{% else %}
+{% set text_query_singular = '{number} ' + type + ' found for "{query}"' %}
+{% set text_query_plural = '{number} ' + type + 's found for "{query}"' %}
+{% set text_query_none_plural = 'No ' + type + 's found for "{query}"' %}
+{% set text_no_query_singular = '{number} ' + type + ' found' %}
+{% set text_no_query_plural = '{number} ' + type + 's found' %}
+{% set text_no_query_none_plural = 'No ' + type + 's found' %}
+
+{% set text_query = ungettext(text_query_singular, text_query_plural, count) %}
+{% set text_query_none = _(text_query_none_plural) %}
+{% set text_no_query = ungettext(text_no_query_singular, text_no_query_plural, count) %}
+{% set text_no_query_none = _(text_no_query_none_plural) %}
+{%- endif -%}
+
+{% if query %}
+{%- if count -%}
+{{ text_query.format(number=h.localised_number(count), query=query, type=type) }}
+{%- else -%}
+{{ text_query_none.format(query=query, type=type) }}
+{%- endif -%}
+{%- else -%}
+{%- if count -%}
+{{ text_no_query.format(number=h.localised_number(count), type=type) }}
+{%- else -%}
+{{ text_no_query_none.format(type=type) }}
+{%- endif -%}
+{%- endif -%}

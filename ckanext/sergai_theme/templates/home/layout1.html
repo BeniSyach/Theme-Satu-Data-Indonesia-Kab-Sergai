@@ -1,0 +1,153 @@
+<!--
+
+This file overrides the layout1.html in
+/usr/lib/ckan/default/src/ckan/ckan/templates/home/.
+
+In the future, we could likely push a new item to the front page layouts
+dropdown in the settings page and rename this file layout4.html.
+
+-->
+<style type="text/css">
+  /*.browse-topic{
+    position: relative;
+    margin-bottom: 70px;
+  }
+  .group_count_badge{
+   
+    display: none;
+   
+  }
+  .browse-topic:hover .group_count_badge{
+    position: absolute;
+    display: block;
+    top: -24px;
+    left: 47px;
+
+  }
+  .tooltip-arrow,
+.kp-odp-tooltip + .tooltip > .tooltip-inner {background-color: #1abc9c;}
+.bs-tooltip-top .arrow::before, .bs-tooltip-auto[x-placement^="top"] 
+.arrow::before {
+border-top-color: #00acd6;
+}
+*/
+
+  .kp-odp-tooltip+.tooltip>.tooltip-inner {
+    background-color: #51eb04;
+  }
+
+  .kp-odp-tooltip+.tooltip>.tooltip-arrow {
+    border-bottom-color: #80dd05 !important;
+  }
+</style>
+<div class="outer">
+  <div role="main" class="hero inner">
+    <div class="container">
+      <div class="row row1">
+        <div class="col-md-8 col-md-offset-2">
+          <div class="module-content">
+            <h1 class="hero-text secondary-hero-text-heading text-center">Portal Satu Data Indonesia Pemerintah
+              Kabupaten Serdang Bedagai</h1>
+            <!-- <h1 class="hero-text secondary-hero-text-heading text-center"></h1> -->
+            <p class="hero-text-description text-center">
+              Temukan data-data Pemerintah dengan mudah! {{ h.sergai_theme_dataset_count() }} Kumpulan Data Di
+              Pemerintahan Kabupaten Serdang Bedagai
+            </p>
+          </div>
+        </div>
+        <div class="col-md-8 col-md-offset-2">
+          {% snippet 'home/snippets/search.html' %}
+        </div>
+        <div class="col-md-8 col-md-offset-2">
+          <div class="row">
+            <div class="col-md-2 col-md-offset-1 text-center">
+              <h1 class="hero-text secondary-hero-text-heading">{{ h.sergai_theme_dataset_count() }}</h1>
+              <p class="hero-text-description">Kumpulan Data</p>
+            </div>
+            <div class="col-md-2 col-md-offset-2 text-center">
+              <h1 class="hero-text secondary-hero-text-heading">{% for organisasi in h.sergai_theme_groups() %}{{
+                organisasi.package_count }} {% endfor %}</h1>
+              <p class="hero-text-description">Organisasi</p>
+            </div>
+            <div class="col-md-2 col-md-offset-2 text-center">
+              <h1 class="hero-text secondary-hero-text-heading">{% for topic in h.sergai_theme_groups() %}{{
+                topic.package_count }} {% endfor %}</h1>
+              <p class="hero-text-description">Katalog</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div role="main" class="main-browse">
+  <div class="container">
+    <div class="row row2">
+      <div class="col-md-12 col1">
+        <div class="module-content box">
+          <h1 class="browse-heading text-center">KATALOG</h1>
+          <div>
+            {% for topic in h.sergai_theme_groups() %}
+            <div class="col-lg-2 col-md-2 col-sm-3 col-xs-4">
+              <a href="/group/{{ topic.name }}" class=" kp-odp-tooltip browse-topic thumbnail center-block"
+                data-toggle="dataset-tooltip" title="{{ topic.package_count }} Datasets">
+                <img class="browse-topic-image" src="{{ topic.image_display_url or '/img/icons-document.svg' }}"
+                  width="100%">
+              </a>
+              <a href="/group/{{ topic.name }}" class=" kp-odp-tooltip browse-topic center-block"
+                data-toggle="dataset-tooltip" title="{{ topic.package_count }} Datasets"></a>
+              <div class="browse-topic-title text-center">
+                <strong>{{ topic.display_name }}</strong>
+              </div>
+              <div class="browse-topic-count text-center" style="font-weight: 100;">
+                ({{ topic.package_count }})
+              </div>
+              </a>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+      <div class="col-md-12 col1 text-center" style="margin: 60px 0px 60px 0px;">
+        <a href="/group" class="button-white">Lihat Semua Katalog</a>
+      </div>
+    </div>
+  </div>
+</div>
+<div role="main" class="main-updates">
+  <div class="container">
+    <div class="row row2">
+      <div class="col-md-12">
+        {% snippet 'home/snippets/latest_datasets.html' %}
+      </div>
+    </div>
+  </div>
+</div>
+
+<div role="main" class="main-data-strategy">
+  <div class="container">
+    <div class="row featurette">
+      <div class="col-md-12" style="margin: 60px 0px 60px 0px;">
+        <h1 class=".data-strategy-heading text-center">Strategi Satu Data Indonesia Kabupaten Serdang Bedagai</h1>
+      </div>
+      <div class="col-md-7 col-md-push-5 main-data-strategy-points">
+        <ul>
+          <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga incidunt molestiae quasi nobis vero quis
+            officiis harum possimus! Ipsa iusto fuga qui quas sit architecto harum mollitia ullam maiores praesentium?
+          </li>
+          <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, sequi vero molestiae esse aliquam
+            provident odio commodi sapiente expedita eligendi asperiores quo corrupti repellat dolor aut dolorem quia
+            odit modi.</li>
+          <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur molestiae quae inventore voluptatum
+            nihil optio totam, fugit eaque aspernatur blanditiis alias tempore dignissimos, soluta ullam. Nihil sed
+            iusto beatae tenetur.</li>
+        </ul>
+        <a href="#" class="button-green" style="margin: 60px 0px 60px 0px;">Download UU Stategi Satu Data Indonesia </a>
+      </div>
+      <div class="col-md-5 col-md-pull-7">
+        <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="500x500"
+          src="/images/data-strategy.svg" data-holder-rendered="true">
+      </div>
+    </div>
+  </div>
+</div>

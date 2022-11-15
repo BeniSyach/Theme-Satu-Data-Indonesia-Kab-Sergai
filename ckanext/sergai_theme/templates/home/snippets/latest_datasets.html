@@ -1,0 +1,13 @@
+{% set latest_datasets = h.sergai_theme_most_recent_datasets() %}
+
+<div class="module-content box">
+  <header>
+    <h2 class="browse-heading text-center">Kumpulan Data yang Baru Ditambahkan</h2>
+  </header>
+  <section>
+    {% snippet 'home/snippets/package_list.html', packages=latest_datasets %}
+  </section>
+  <div class="col-md-12 col1 text-center" style="margin: 60px 0px 60px 0px;">
+    <a href="/dataset" class="button-white">Lihat Semua</a>
+  </div>
+</div>

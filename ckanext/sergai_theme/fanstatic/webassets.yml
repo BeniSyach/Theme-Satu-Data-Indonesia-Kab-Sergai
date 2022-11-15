@@ -1,0 +1,10 @@
+ext_script:  # name of the asset
+  filters: rjsmin # preprocessor for files. Optional
+  output: sergai_theme/favorite.js  # actual path, where the generated file will be stored
+  contents: # list of files that are included in the asset
+    - favorite.js
+ext_style:  # name of asset
+  output: sergai_theme/style.css  # actual path, where generated file will be stored
+  contents: # list of files that are included into asset
+    - style.css
+    - style.css.map

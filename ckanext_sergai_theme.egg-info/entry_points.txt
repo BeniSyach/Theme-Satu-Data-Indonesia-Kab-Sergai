@@ -1,0 +1,9 @@
+
+        [ckan.plugins]
+        # Add plugins here, e.g.
+        sergai_theme=ckanext.sergai_theme.plugin:SergaiThemePlugin
+
+	[babel.extractors]
+        ckan = ckan.lib.extract:extract_ckan
+
+    

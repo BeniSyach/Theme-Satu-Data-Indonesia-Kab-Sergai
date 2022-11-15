@@ -1,0 +1,110 @@
+<!-- <footer class="site-footer">
+  <div class="container">
+    {% block footer_content %}
+      <div class="row">
+        <div class="col-xs-12 col-sm-6">
+          <a class="logo" href="{{ h.url('home.index') }}"><img src="/img/opendata-logo-footer.svg"  alt="{{ g.site_title }} Logo" height="31" width="210" title="{{ g.site_title }} Logo" /></a>
+        </div>
+        <div class="col-xs-6 col-sm-3">
+          <ul>
+            {% block header_site_navigation_tabs %}
+              {{ h.build_nav_main(
+                ('search', _('Datasets')),
+                ('organizations_index', _('Organizations')),
+                ('home.about', _('About'))
+              ) }}
+            {% endblock %}
+          </ul>
+        </div>
+        <div class="col-xs-6 col-sm-3">
+          <ul>
+            <li><a href="/pages/faq">FAQ</a></li>
+            <li><a href="/pages/contact">Contact</a></li>
+            <li><a href="/pages/terms">Terms</a></li>
+          </ul>
+        </div>
+      </div>
+    {% endblock %}
+  </div>
+
+  {% block footer_debug %}
+    {% if g.debug %}
+      {% include 'snippets/debug.html' %}
+    {% endif %}
+  {% endblock %}
+</footer> -->
+<!-- <section class="newsletter">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="content">
+          <h2>REQUEST FOR DATASET</h2>
+          <p>Just share your email and we'll contact you.</p>
+          <div class="input-group">
+            <input type="email" class="form-control" placeholder="Enter your email">
+            <span class="input-group-btn">
+              <button class="btn btn-success" type="submit">REQUEST A DATASET</button>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </section> -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-5 col-sm-6 footerleft ">
+        <!-- <div class="logofooter">
+          <a class="logo" href="{{ h.url_for('home.index') }}"><img style="height:100px!important"
+              src="/images/Logo_Data.png" srcset="" alt="{{ g.site_title }}" title="{{ g.site_title }}" /></a>
+        </div> -->
+        <p class="text-center">Powered By</p>
+        <div class="logofooter">
+          <img src="/images/logo-serdangbedagai.png" alt="logo_icon" width="50%">
+          <img src="/images/logo_bapennas.png" alt="logo bapennas" width="20%">
+          <img src="/images/logo_satu_data_indonesia.png" alt="logo satu data indoensia" width="20%">
+          <!-- <img src="/images/logo_diskominfo.png" alt="logo diskominfo"> -->
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6 paddingtop-bottom">
+        <h6 class="heading7">LINK</h6>
+        <ul class="footer-ul">
+          <li><a href="https://serdangbedagaikab.go.id" target="_blank">Portal Resmi Kabupaten Serdang Bedagai</a></li>
+          <li><a href="https://diskominfo.serdangbedagaikab.go.id" target="_blank">Diskominfo
+              Kabupaten Serdang Bedagai</a></li>
+          <li><a href="https://bapedda.serdangbedagaikab.go.id" target="_blank">Bapedda Kabupaten Serdang Bedagai</a>
+          </li>
+          <li><a href="#">Saran & Kritik</a></li>
+        </ul>
+      </div>
+      <div class="col-md-4 col-sm-6 paddingtop-bottom">
+        <h6 class="heading7">Kontak Kami</h6>
+        <div class="post">
+          <h3>Satu Data Indonesia Pemerintah Kabupaten Serdang Bedagai</h3>
+          <p class="address"><i class="fa fa-map-pin"></i>Jl. Negara No.300, Firdaus, Kec. Sei Rampah, <br> Kabupaten
+            Serdang Bedagai, Sumatera Utara 20995</p>
+          <p class="address"><i class="fa fa-phone"></i> Phone: (0621) 441009</p>
+          <p class="address"><i class="fa fa-envelope"></i> E-mail : <a
+              href="diskominfo@serdangbedagaiakb.go.id">diskominfo@serdangbedagaikab.go.id</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<!--footer start from here-->
+
+<div class="copyright">
+  <div class="container">
+    <div class="col-md-6">
+      <p>© Copyright 2022. All Right Reserved </p>
+    </div>
+    <div class="col-md-6">
+      <ul class="bottom_ul">
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms and Condition</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
