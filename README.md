@@ -18,9 +18,3 @@
 - cd `/usr/lib/ckan/default/src`
 - Jalankan `python setup.py install`
 - Setelah ini berhasil diselesaikan, tambahkan `sergai_theme` ke ckan.plugins di file konfigurasi ckan.
-
-## Manual generating main.css
-
----
-
-Jalankan `sass ckanext/sergai_theme/public/css/sass/main.scss ckanext/sergai_theme/public/css/main.css`
