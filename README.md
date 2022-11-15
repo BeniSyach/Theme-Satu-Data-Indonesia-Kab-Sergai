@@ -1,23 +1,26 @@
+### Halaman Depan
 
-![](./sergai-header.PNG)
+![](./tampilan-depan.png)
+
 # ckanext-sergai_theme
 
+### Halaman Dataset
 
+![](./dataset.png)
 
-### Datasets Page
-![](./sergai-datasets.PNG)
+### Halaman Organisasi
 
-### Topics on front Page
-![](./sergai-topics.PNG)
+![](./organisasi.png)
 
-# Installation:
-- copy the zip file to `/usr/lib/ckan/default/src`
+# Cara Install:
+
+- salin file zip ke `/usr/lib/ckan/default/src`
 - cd `/usr/lib/ckan/default/src`
-- run ``` python setup.py install ```
-- After this has completed successfully, add `sergai_theme` to ckan.plugins in ckan configuration file.
+- Jalankan `python setup.py install`
+- Setelah ini berhasil diselesaikan, tambahkan `sergai_theme` ke ckan.plugins di file konfigurasi ckan.
 
-## Manually generating main.css
-----------------------------
+## Manual generating main.css
 
-Run `sass ckanext/sergai_theme/public/css/sass/main.scss ckanext/sergai_theme/public/css/main.css`
+---
 
+Jalankan `sass ckanext/sergai_theme/public/css/sass/main.scss ckanext/sergai_theme/public/css/main.css`
