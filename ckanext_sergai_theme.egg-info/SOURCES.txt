@@ -56,7 +56,7 @@ ckanext/sergai_theme/public/images/data-strategy.png
 ckanext/sergai_theme/public/images/data-strategy.svg
 ckanext/sergai_theme/public/images/khyber-pass-peshawar-pakistan-gate-was-built-mouth-where-jamrud-fort-also-located-near-city-155406774.png
 ckanext/sergai_theme/public/images/khyber-pass-peshawar-pakistan-gate-was-built-mouth-where-jamrud-fort-also-located-near-city-155406774.svg
-ckanext/sergai_theme/public/images/kp-logo.jpg
+ckanext/sergai_theme/public/images/kp-logo.png
 ckanext/sergai_theme/public/images/logo-serdangbedagai.png
 ckanext/sergai_theme/public/images/logo.png
 ckanext/sergai_theme/public/images/logo_bapennas.png
