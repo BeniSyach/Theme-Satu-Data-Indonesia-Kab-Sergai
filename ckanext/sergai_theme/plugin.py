@@ -42,7 +42,7 @@ def groups():
 
 def groups_count():
     """Return a list of groups"""
-    result = tk.get_action('group_list')({}, {'rows': 1})
+    result = tk.get_action('package_search')({}, {'rows': 1})
     return result['count']
 
 # def package_showcase_list(context):
